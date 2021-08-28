@@ -1,0 +1,251 @@
+:root {
+  --backgroundcolor: #f3e2c6;
+  --textcolor: #000000;
+}
+
+/*레이아웃*/
+
+.contents {
+  height: 1500px;
+  background-color: #f3e2c6;
+  /*font-family: "Chela One";*/
+  font-family: "Cutive Mono", monospace;
+}
+.contents .backgroundimg {
+  position: relative;
+  top: 10px;
+  height: 400px;
+  background: url(imgfo/movie1.PNG) center;
+}
+/*
+.contents .upcomingimg {
+  position: relative;
+  top: 10px;
+  height: 400px;
+  background: url(imgfo/movie1.PNG) center;
+}*/
+.contents h2 {
+  border: 1px;
+  position: relative;
+  top: 10px;
+  margin-left: 50px;
+}
+/* 게시판*/
+.contents .notice {
+  display: flex;
+}
+.contents .review {
+  position: relative;
+  text-decoration: none;
+  top: 10px;
+  width: 300px;
+  left: 50px;
+}
+.contents .review h4 {
+  position: relative;
+  margin-left: 30px;
+  font-size: 40px;
+}
+.contents .review ul {
+  position: relative;
+  top: -20px;
+}
+.contents .review a {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-decoration: none;
+  font-size: 20px;
+  color: #000000;
+
+  font-family: "Yeon Sung", cursive;
+}
+.contents .review a.more {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: block;
+  width: 80px;
+  height: 20px;
+
+  font-family: "Yeon Sung", cursive;
+}
+.contents .review a.more :hover {
+  color: white;
+}
+/*문의 게시판*/
+
+.contents .ask {
+  position: relative;
+
+  top: 10px;
+  right: 500px;
+  width: 300px;
+  left: 50px;
+}
+.contents .ask h4 {
+  position: relative;
+  margin-left: 30px;
+  font-size: 40px;
+}
+.contents .ask a {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "Yeon Sung", cursive;
+  color: #000000;
+}
+.contents .ask a.more {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: block;
+  width: 80px;
+  height: 20px;
+
+  font-family: "Yeon Sung", cursive;
+}
+.contents .ask a.more :hover {
+  color: white;
+}
+.contents .ask ul {
+  position: relative;
+  top: -20px;
+}
+.footer {
+  height: 200px;
+
+  background-color: #000000;
+}
+body {
+  margin: 0;
+  font-family: "Cutive Mono", monospace;
+}
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--backgroundcolor);
+  padding: 8px 12px;
+}
+.Navbar_menu {
+  list-style: none;
+  display: flex;
+  padding-left: 0;
+}
+.Navbar_menu li {
+  font-size: 30px;
+  padding: 70px 12px;
+}
+
+.Navbar_menu a {
+  text-decoration: none;
+  color: var(--textcolor);
+}
+
+.Navbar_menu a:hover {
+  text-decoration: underline;
+  color: aliceblue;
+}
+
+.Navbar_logo a {
+  font-size: 50px;
+  color: var(--textcolor);
+  text-decoration: none;
+}
+.Navbar_logo i {
+  font-size: 50px;
+  padding-left: 10px;
+}
+.Navbar_icons {
+  list-style: none;
+  color: var(--textcolor);
+  display: flex;
+  padding-left: 0;
+}
+.Navbar_icons li {
+  padding: 8px;
+  font-size: 18px;
+}
+.Navbar_icons li:hover {
+  color: #ffff;
+}
+.navbar_toggleBtn {
+  display: none;
+}
+.contents .backgroundimg .movieimg {
+  display: flex;
+
+  /*flex-direction: column;*/
+}
+
+.contents .backgroundimg .movieimg img {
+  height: 400px;
+}
+.contents .backgroundimg .movieimg a {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 70px;
+  padding-bottom: 100px;
+}
+
+/*
+.contents .upcomingimg {
+  background: url(imgfo/movie1.PNG);
+}
+.contents .upcomingimg .movieimg_upcoming {
+  display: flex;
+}
+.contents .upcomingimg .movieimg_upcoming img {
+  height: 400px;
+}
+.contents .upcomingimg .movieimg_upcoming a {
+  padding-left: 70px;
+  padding-bottom: 100px;
+}
+*/
+.swiper-container {
+  height: 500px;
+  
+}
+.swiper-slide {
+  text-align: center;
+  display: flex;
+  align-items: center; /*위아래 기준 중앙정렬*/
+  justify-content: center; /*좌우 기준 중앙정렬*/*/
+}
+.swiper-slide img {
+  
+  height: 400px;
+}
+@media screen and (max-width: 768px) {
+  .Navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+  }
+  .Navbar_menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+  .Navbar_icons {
+    display: none;
+    width: 100%;
+    justify-content: center;
+  }
+  .navbar_toggleBtn {
+    display: block;
+    position: absolute;
+    right: 32px;
+    font-size: 24px;
+    color: var(--textcolor);
+  }
+  .Navbar_menu.active,
+  .Navbar_icons.active {
+    display: flex;
+  }
+}
